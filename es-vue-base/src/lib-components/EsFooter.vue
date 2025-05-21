@@ -7,7 +7,7 @@
                     <div
                         class="col col-12 col-md-5 col-lg-4 font-size-200 font-size-md-400 font-weight-bold mb-150 mb-md-0">
                         {{ content.banner.headline }}
-                        <br>
+                        <br />
                         {{ content.banner.subHeadline }}
                     </div>
                     <div class="col col-12 col-md-7 col-lg-8">
@@ -16,6 +16,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Make an impact -->
         <div class="bg-blue-800 py-200 pt-lg-200 pb-lg-150 px-200">
             <div class="container px-0">
@@ -46,6 +47,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Link columns -->
                     <!-- Logo and Social-->
                     <div class="col col-12 col-lg-4 order-lg-0">
@@ -89,17 +91,27 @@
                 </p>
                 <!-- Trademark Info -->
                 <!-- Legal -->
-                <hr class="border-top border-blue-500 m-0">
+                <hr class="border-top border-blue-500 m-0" />
                 <div class="row pt-100">
                     <div
                         v-for="link in content.legalLinks"
                         :key="link.text"
-                        class="col col-6 col-lg-auto font-size-75 font-weight-semibold font-size-md-50 font-weight-md-normal mt-25 mb-50 pr-lg-300">
+                        class="col col-6 col-lg-auto mt-25 mb-50 pr-lg-300">
                         <es-nav-bar-link
+                            v-if="link.url"
                             :href="link.url"
-                            class="text-reset font-weight-normal">
+                            class="text-reset font-weight-normal font-size-75 font-size-md-50 font-weight-md-normal">
                             {{ link.text }}
                         </es-nav-bar-link>
+                        <div v-else>
+                            <icon-ccpa-opt-out />
+                            <es-button
+                                inline
+                                class="toggle-info-display text-reset font-weight-normal font-size-75 font-size-md-50 font-weight-md-normal ml-1 border-0 p-0"
+                                variant="link">
+                                {{ link.text }}
+                            </es-button>
+                        </div>
                     </div>
                 </div>
                 <!-- Legal -->

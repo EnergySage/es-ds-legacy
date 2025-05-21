@@ -161,23 +161,27 @@ export default (
     legalLinks: [
         {
             text: 'Terms of use',
-            url: '/terms-of-use/',
+            url: `${ES_DOMAIN}/terms-of-use/`,
         },
         {
             text: 'Privacy policy',
-            url: '/privacy-policy/',
+            url: `${ES_DOMAIN}/privacy-policy/`,
         },
         {
             text: 'Mobile terms of use',
-            url: '/mobile-terms-of-use/',
+            url: `${ES_DOMAIN}/mobile-terms-of-use/`,
         },
         {
             text: 'Non-discrimination policy',
-            url: '/nondiscrimination/',
+            url: `${ES_DOMAIN}/nondiscrimination/`,
+        },
+        {
+            text: 'Your privacy choices',
         },
     ],
     copyrightText: '© Copyright 2009-{currentYear} EnergySage, Inc. All rights reserved.',
-    trademarkText: 'ENERGYSAGE is a registered trademark and the EnergySage logo is a trademark of EnergySage, Inc. Other trademarks are the property of either EnergySage, Inc. or our licensors and are used with permission.',
+    trademarkText:
+        'ENERGYSAGE is a registered trademark and the EnergySage logo is a trademark of EnergySage, Inc. Other trademarks are the property of either EnergySage, Inc. or our licensors and are used with permission.',
     departmentOfEnergy: {
         learnMore: {
             text: 'Learn more about our success working with the U.S. Department of Energy.',
