@@ -36,7 +36,7 @@ export default (
                 link: `${ES_DOMAIN}/share-your-experience/`,
             },
             {
-                name: 'Sign out!',
+                name: 'Sign out',
                 link: `${ACCOUNTS_DOMAIN}/signout/`,
             },
         ],
