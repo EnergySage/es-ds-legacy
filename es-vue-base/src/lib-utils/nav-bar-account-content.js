@@ -37,7 +37,7 @@ export default (
             },
             {
                 name: 'Sign out',
-                link: `${ES_DOMAIN}/logout/`,
+                link: `${ACCOUNTS_DOMAIN}/signout/`,
             },
         ],
     },
