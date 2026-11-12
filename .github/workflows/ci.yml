@@ -17,20 +17,18 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest]
-                node: [16]
 
         steps:
             - name: Checkout 🛎
-              uses: actions/checkout@master
+              uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
 
-            - name: Setup node env 🏗
-              uses: actions/setup-node@v3.7.0
+            - name: Set up Node from .node-version 🏗
+              uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
               with:
-                  node-version: ${{ matrix.node }}
-                  check-latest: true
+                  node-version-file: '.node-version'
 
             - name: Cache node_modules 📦
-              uses: actions/cache@v4
+              uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
               with:
                   path: ~/.npm
                   key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
